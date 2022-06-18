@@ -20,7 +20,7 @@ catchup=False  # Catchup
 
 t1 = BashOperator(
     task_id='nse_gsheet',
-    bash_command='python C:\DAG\stock_data.py',
+    bash_command='python stock_data.py',
     dag=dag)
 
 start = DummyOperator(task_id = 'start',dag=dag)
