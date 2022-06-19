@@ -87,7 +87,7 @@ df2 = df1.loc[ :, ['pricebandupper',
 'isinCode',
 'lastPrice']]
 
-gc = gspread.service_account(filename='modular-skyline-353602-05178b341f8f.json')
+gc = gspread.service_account(filename='/home/airflow/airflow/dags/nse_gsheet/modular-skyline-353602-05178b341f8f.json')
 sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/1eiKgQsvmnKkowwp0TPzQgace4kIpxkZ7b6Y4etS_Z3Q')
 ws = sh.get_worksheet(1)
 set_with_dataframe(ws,df2)
